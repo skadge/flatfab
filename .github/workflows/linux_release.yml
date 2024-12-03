@@ -41,7 +41,7 @@ jobs:
           setup-python: false
 
       - name: Install other dependencies
-        run: /usr/bin/sudo apt-get install libglu1-mesa-dev
+        run: /usr/bin/sudo apt-get install libglu1-mesa-dev libeigen3-dev
               
       - name: Create build directory
         run:  mkdir ${{ env.SOURCE_DIR }}/build
