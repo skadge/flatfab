@@ -34,15 +34,13 @@ jobs:
           submodules: recursive
 
       - name: Install Qt
-        uses: jurplel/install-qt-action@v4.1.1
+        uses: jurplel/install-qt-action@v4
         with:
           version:      ${{ env.QT_VERSION }}
-          host:         linux
-          target:       desktop
-          arch:         gcc_64
-          dir:          ${{ runner.temp }}
-          modules:      qtwebengine   
           setup-python: false
+
+      - name: Install other dependencies
+        run: apt-get install libglu1-mesa-dev
               
       - name: Create build directory
         run:  mkdir ${{ env.SOURCE_DIR }}/build
