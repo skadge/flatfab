@@ -37,7 +37,7 @@ jobs:
         uses: jurplel/install-qt-action@v4
         with:
           version:      ${{ env.QT_VERSION }}
-          module:       qtwebengine
+          modules:      qtwebengine
           setup-python: false
 
       - name: Install other dependencies
