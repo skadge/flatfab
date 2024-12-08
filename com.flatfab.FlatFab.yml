@@ -33,11 +33,6 @@ modules:
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
-      - type: git
-        #url: https://github.com/JamesMcCrae/flatfab.git
-        url: https://github.com/skadge/flatfab.git
-        branch: cmake
-        # better:
-        # tag: ...
-        # commit: ...
+      - type: dir
+        path: ./
 
